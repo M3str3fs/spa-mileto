@@ -1,0 +1,33 @@
+<div class="container">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <!-- <mat-card-title>Usuario Mileto</mat-card-title> -->
+            <!-- <mat-card-subtitle>Foto</mat-card-subtitle> -->
+        </mat-card-header>
+        <span class="perfil">
+    <img mat-card-image src="assets/imagens/avatar.png" alt="Photo of a Shiba Inu">
+  </span>
+        <mat-card-content class="center">
+            <mat-form-field appearance="outline">
+                <mat-label>Login</mat-label>
+                <input matInput placeholder="Login">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your password</mat-label>
+                <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon matSuffix>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <!-- <button mat-button>Cadastro</button> -->
+            <button mat-button>Login</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

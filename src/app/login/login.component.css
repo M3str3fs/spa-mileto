@@ -1,0 +1,64 @@
+.container {
+    width: 75vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box {
+    background: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+    filter: drop-shadow(1px 1px 2px #D8DCE0);
+    width: 20%;
+    height: 20%;
+    padding: 50px;
+    text-align: center;
+    box-align: center;
+}
+
+form {
+    margin-top: 16%;
+}
+
+p {
+    margin-top: 10px;
+}
+
+
+/* .example-card {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1.5);
+    max-width: 400px;
+} */
+
+.example-header-image {
+    background-image: url('/src/assets/imagens/avatar.png');
+    background-size: cover;
+}
+
+.mat-card {
+    margin-left: 35%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 75vw;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1.5);
+    max-width: 400px;
+    /* //align-self: center  */
+}
+
+::ng-deep .mat-card-content {
+    /* styles here */
+    align-content: center
+}
+
+.button {}
+
+.perfil {
+    color: rgba(255, 255, 255, 0.8);
+    width: 10;
+}
+
+.mat-card-image {
+    width: 60%;
+    margin-left: 20%
+}
