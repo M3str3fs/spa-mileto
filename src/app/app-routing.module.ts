@@ -10,10 +10,11 @@ const routes: Routes = [
   {
     path: '', component: NavComponent,
     children: [
-      {path: 'cadastro-cliente', component:CadastroClienteComponent}
+      { path: 'cadastro-cliente', component:CadastroClienteComponent},
     ]
   },
   { path: 'login', component: LoginComponent },
+  //{ path: 'cadastro-cliente', component:CadastroClienteComponent},
   { path: 'testao', component: LoginComponent },
   // { path: 'dashboard-fazendas', component: DashboardFazendasComponent },
   // { path: 'fazenda-detalhes', component: FazendaDetalhesComponent },

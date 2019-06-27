@@ -6,6 +6,7 @@
         <mat-step [stepControl]="firstFormGroup">
             <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Responsável</ng-template>
+                <mat-checkbox>Possuo Certificado Digital(e-CPF ou e-CNPJ) e quero utilizalo no processo de protocolo</mat-checkbox>
                 <mat-form-field class='field'>
                     <input matInput placeholder="E-mail de contato (será confirmado)" formControlName="firstCtrl" required>
                 </mat-form-field>
@@ -31,32 +32,42 @@
                         <input matInput placeholder="Telefone" formControlName="teste1" required>
                     </mat-form-field>
                 </div>
-                <mat-card class="col-6-custom mt-40">
+                <mat-card class="col-6-custom mt-20">
                     <input matInput placeholder="Empresa/Instituição do Responsável">
                     <div class="col-2-custom">
                         <mat-form-field class="field">
-                            <input matInput placeholder="Origem" autocomplete="off" formControlName="origem">
+                            <input matInput placeholder="Origem" autocomplete="off" formControlName="teste1">
                         </mat-form-field>
                     </div>
 
                     <div class="col-3-custom">
                         <mat-form-field class="field">
-                            <input matInput placeholder="Cidade" autocomplete="off" formControlName="cidade">
+                            <input matInput placeholder="Cidade" autocomplete="off" formControlName="teste1">
                         </mat-form-field>
                     </div>
 
                 </mat-card>
-                <mat-card class="col-6-custom mt-40">
+                <mat-card class="col-6-custom mt-20">
                     <input matInput placeholder="Contato Alternativo">
                     <div class="col-2-custom">
                         <mat-form-field class="field">
-                            <input matInput placeholder="Nome" autocomplete="off" formControlName="origem">
+                            <input matInput placeholder="Nome" autocomplete="off" formControlName="teste1">
                         </mat-form-field>
                     </div>
 
+                    <div class="col-3-custom ">
+                        <mat-form-field class="field">
+                            <input matInput placeholder="Cargo" autocomplete="off" formControlName="teste1">
+                        </mat-form-field>
+                    </div>
                     <div class="col-3-custom">
                         <mat-form-field class="field">
-                            <input matInput placeholder="Cargo" autocomplete="off" formControlName="cidade">
+                            <input matInput placeholder="E-mail" autocomplete="off" formControlName="teste1">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-3-custom">
+                        <mat-form-field class="field">
+                            <input matInput placeholder="Telefone" autocomplete="off" formControlName="teste1">
                         </mat-form-field>
                     </div>
 
@@ -70,7 +81,7 @@
             <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Motivo de Envio</ng-template>
                 <mat-form-field>
-                    <input matInput placeholder="Address" formControlName="secondCtrl" required>
+                    <input matInput placeholder="Address" formControlName="teste4" required>
                 </mat-form-field>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
@@ -81,20 +92,54 @@
         <mat-step [stepControl]="firstFormGroup">
             <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Empresa Nacional</ng-template>
-                <mat-form-field>
+                <!-- <mat-form-field>
                     <input matInput placeholder="Address" formControlName="secondCtrl" required>
-                </mat-form-field>
+                </mat-form-field> -->
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Pessoa Fisica
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+
+                        <mat-form-field>
+                            <input matInput placeholder="CNPJ">
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input matInput placeholder="CPF">
+                        </mat-form-field>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Pessoa Juridica
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+
+                        <mat-form-field>
+                            <input matInput placeholder="CNPJ">
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <input matInput placeholder="CPF">
+                        </mat-form-field>
+                    </mat-expansion-panel>
+
+
+                </mat-accordion>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
                     <button mat-button matStepperNext>Next</button>
                 </div>
             </form>
         </mat-step>
-        <mat-step [stepControl]="secondFormGroup">
-            <form [formGroup]="secondFormGroup">
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Empresa Estrangeira</ng-template>
                 <mat-form-field>
-                    <input matInput placeholder="Address" formControlName="secondCtrl" required>
+                    <input matInput placeholder="Address" formControlName="teste4" required>
                 </mat-form-field>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
@@ -102,11 +147,11 @@
                 </div>
             </form>
         </mat-step>
-        <mat-step [stepControl]="secondFormGroup">
-            <form [formGroup]="secondFormGroup">
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Demonstração Financeira</ng-template>
                 <mat-form-field>
-                    <input matInput placeholder="Address" formControlName="secondCtrl" required>
+                    <input matInput placeholder="Address" formControlName="teste4" required>
                 </mat-form-field>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
@@ -114,28 +159,29 @@
                 </div>
             </form>
         </mat-step>
-        <mat-step [stepControl]="secondFormGroup">
-            <form [formGroup]="secondFormGroup">
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Outros Anexos</ng-template>
                 <mat-form-field>
-                    <input matInput placeholder="Address" formControlName="secondCtrl" required>
+                    <input matInput placeholder="Address" formControlName="teste4" required>
                 </mat-form-field>
                 <div>
-                    <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button matStepperNext>Next</button>
+                    <div>
+                        <input id="upload-csv-input" type="file" accept=".pdf">
+                        <p></p>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
                 </div>
             </form>
         </mat-step>
-        <mat-step [stepControl]="secondFormGroup">
-            <form [formGroup]="secondFormGroup">
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Resumo</ng-template>
                 <mat-form-field>
-                    <input matInput placeholder="Address" formControlName="secondCtrl" required>
+                    <input matInput placeholder="Address" formControlName="teste4" required>
                 </mat-form-field>
-                <div>
-                    <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button matStepperNext>Next</button>
-                </div>
+
             </form>
         </mat-step>
         <mat-step>

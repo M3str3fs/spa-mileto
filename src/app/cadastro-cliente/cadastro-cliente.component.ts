@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-
+import {MatDialog} from '@angular/material/dialog';
+import { DialogJuridicoComponent } from '../dialog-juridico/dialog-juridico.component';
 @Component({
   selector: 'app-cadastro-cliente',
   templateUrl: './cadastro-cliente.component.html',
@@ -12,7 +13,10 @@ export class CadastroClienteComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
 
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(
+    private _formBuilder: FormBuilder,
+    public dialog: MatDialog
+    ) {}
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -27,4 +31,6 @@ export class CadastroClienteComponent implements OnInit {
       secondCtrl: ['', Validators.required]
     });
   }
+
+
 }

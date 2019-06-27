@@ -11,14 +11,16 @@ import { LoginComponent } from './login/login.component';
 import { AngularMaterialModule } from './shared/angular-material.module';
 import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { DialogJuridicoComponent } from './dialog-juridico/dialog-juridico.component';
+import { MatFileUploadModule } from 'angular-material-fileupload';
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HeaderComponent,
     LoginComponent,
-    CadastroClienteComponent
+    CadastroClienteComponent,
+    DialogJuridicoComponent
   ],
   imports: [
     BrowserModule,
@@ -31,8 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatListModule,
     AngularMaterialModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    MatFileUploadModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
